@@ -199,14 +199,7 @@ set:function(a){this.g.height=a}},width:{configurable:!0,enumerable:!0,get:funct
           }, 1);
         });
       }
-console.log('Sending impression message');
-        window.parent.postMessage({ type: 'iframe-impression', src: window.location.href }, '*');
-        
-        // Track click event
-        document.addEventListener('click', function() {
-            console.log('Sending click message');
-            window.parent.postMessage({ type: 'iframe-click', src: window.location.href }, '*');
-        });
+
       /**
        * Handles the event that is dispatched after the Ad has been
        * initialized and before the default page of the Ad is shown.
